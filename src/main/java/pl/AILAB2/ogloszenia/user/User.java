@@ -18,7 +18,7 @@ public class User {
     private String login;
 
     @NotNull
-    private String possword;
+    private String password;
 
     @NotNull
     private String firstName;
@@ -29,10 +29,10 @@ public class User {
     public User() {
     }
 
-    public User(Long id, @NotNull String login, @NotNull String possword, @NotNull String firstName, @NotNull String lastName) {
+    public User(Long id, @NotNull String login, @NotNull String password, @NotNull String firstName, @NotNull String lastName) {
         this.id = id;
         this.login = login;
-        this.possword = possword;
+        this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -53,12 +53,12 @@ public class User {
         this.login = login;
     }
 
-    public String getPossword() {
-        return possword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPossword(String possword) {
-        this.possword = possword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstName() {

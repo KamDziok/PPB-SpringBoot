@@ -3,7 +3,7 @@ package pl.AILAB2.ogloszenia.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -14,8 +14,8 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping
-    private ArrayList<User> getAllUser(){
-        return (ArrayList<User>) userRepository.findAll();
+    private List<User> getAllUser(){
+        return (List<User>) userRepository.findAll();
     }
 
     @GetMapping("/{login}?{password}")

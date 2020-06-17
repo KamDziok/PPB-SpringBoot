@@ -16,6 +16,9 @@ public class Advertisement {
     private Long id;
 
     @NotNull
+    private String title;
+
+    @NotNull
     private String description;
 
     @NotNull
@@ -25,13 +28,14 @@ public class Advertisement {
     private User user;
 
     @ManyToOne
-    private Categories categories;
+    private Categories category;
 
     public Advertisement() {
     }
 
-    public Advertisement(Long id, @NotNull String description, @NotNull Date date) {
+    public Advertisement(Long id, @NotNull String title, @NotNull String description, @NotNull Date date) {
         this.id = id;
+        this.title = title;
         this.description = description;
         this.date = date;
     }
@@ -42,6 +46,14 @@ public class Advertisement {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
@@ -58,5 +70,21 @@ public class Advertisement {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Categories getCategory() {
+        return category;
+    }
+
+    public void setCategory(Categories category) {
+        this.category = category;
     }
 }
